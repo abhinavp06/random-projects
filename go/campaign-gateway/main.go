@@ -9,11 +9,11 @@ import (
 )
 
 func main() {
-	// ** load logger and config at application startup
 	util.InitLogger()
 	logger := util.GetLogger()
 	config.LoadConfig()
 	cfg := config.GetConfig()
+	
 
 	port := cfg.Port
 	if port == "" {
@@ -25,7 +25,8 @@ func main() {
 	}
 
 	logger.Info("Starting campaign-gateway")
-	
+
+	http.HandleFunc("GET /health", controller.HealthCheck)
 	http.HandleFunc("POST /campaigns/execute", controller.RunCampaigns)
 	
 	logger.Info("campaign-gateway is up and running on port", "port", port)
