@@ -2,6 +2,7 @@ package main
 
 import (
 	"abhinavp06/campaign-gateway/config"
+	"abhinavp06/campaign-gateway/controller"
 	"abhinavp06/campaign-gateway/util"
 
 	"net/http"
@@ -24,6 +25,9 @@ func main() {
 	}
 
 	logger.Info("Starting campaign-gateway")
+	
+	http.HandleFunc("POST /campaigns/execute", controller.RunCampaigns)
+	
 	logger.Info("campaign-gateway is up and running on port", "port", port)
 	
 	err := http.ListenAndServe(port, nil)
