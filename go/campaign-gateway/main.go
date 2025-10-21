@@ -27,7 +27,7 @@ func main() {
 	logger.Info("Starting campaign-gateway")
 
 	http.HandleFunc("GET /health", controller.HealthCheck)
-	http.HandleFunc("POST /campaigns/execute", controller.RunCampaigns)
+	http.HandleFunc("POST /campaigns/execute", controller.TriggerCampaigns)
 	
 	logger.Info("campaign-gateway is up and running on port", "port", port)
 	
