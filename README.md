@@ -25,7 +25,8 @@ I usually have a "goal.md" file in each projects directory which explains my tho
 ├── CP -> I try to solve a few CP problems once in a while. You can find my solutions in this directory. [Codeforces - abhinavp06](https://codeforces.com/profile/abhinavp06)<br/>
 ├── go/<br/>
 │   ├── 🕓 api-load-testing-tool<br/>
-│   ├── ✍🏻 campaign-gateway<br/>
+│   ├── 🤘🏻 campaign-gateway<br/>
+│   ├── ✍🏻 campaign-gateway-v2<br/> 
 │   ├── 🕓 columnar-database<br/>
 │   ├── 🕓 simple-database<br/>
 │   └── 🕓 tweet-to-pdf-converter<br/>
