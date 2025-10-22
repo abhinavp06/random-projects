@@ -1,0 +1,25 @@
+{
+  "name": "random-projects",
+  "version": "1.0.0",
+  "description": "<mark><b>NOTE:</b></mark> If you're a recruiter, go through this repository.",
+  "main": "data.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinavp06/random-projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinavp06/random-projects/issues"
+  },
+  "homepage": "https://github.com/abhinavp06/random-projects#readme",
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "pg": "^8.16.3"
+  }
+}
