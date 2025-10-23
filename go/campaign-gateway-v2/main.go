@@ -1,8 +1,9 @@
 package main
 
 import (
-	"abhinavp06/campaign-gateway/shared"
+	"abhinavp06/campaign-gateway/controller"
 	"abhinavp06/campaign-gateway/db"
+	"abhinavp06/campaign-gateway/shared"
 
 	"net/http"
 	"os"
@@ -16,6 +17,8 @@ func main() {
 	shared.Logger.Info("SERVER_STARTUP (LOG): starting campaign-gateway")
 
 	port := ":" + shared.Configuration.Port
+
+	http.HandleFunc("GET /health", controller.HealthCheck)
 
 	err := http.ListenAndServe(port, nil)
 
