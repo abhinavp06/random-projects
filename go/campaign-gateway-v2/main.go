@@ -2,6 +2,7 @@ package main
 
 import (
 	"abhinavp06/campaign-gateway/shared"
+	"abhinavp06/campaign-gateway/db"
 
 	"net/http"
 	"os"
@@ -10,6 +11,7 @@ import (
 func main() {
 	shared.InitLogger()
 	shared.InitConfig()
+	db.InitializePool()
 
 	shared.Logger.Info("SERVER_STARTUP (LOG): starting campaign-gateway")
 

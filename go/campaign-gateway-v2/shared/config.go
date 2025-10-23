@@ -9,6 +9,7 @@ import (
 type Config struct {
 	Environment string
 	Port string
+	PgUri string
 }
 
 var Configuration *Config = &Config{}
@@ -22,4 +23,5 @@ func InitConfig() {
 
 	Configuration.Environment = os.Getenv("ENVIRONMENT")
 	Configuration.Port = os.Getenv("PORT")
+	Configuration.PgUri = os.Getenv("PG_URI")
 }
