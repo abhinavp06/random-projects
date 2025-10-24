@@ -19,6 +19,7 @@ func main() {
 	port := ":" + shared.Configuration.Port
 
 	http.HandleFunc("GET /health", controller.HealthCheck)
+	http.HandleFunc("POST /campaigns", controller.CreateCampaign)
 
 	err := http.ListenAndServe(port, nil)
 
