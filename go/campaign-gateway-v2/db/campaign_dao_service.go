@@ -16,7 +16,7 @@ func InsertCampaign(campaignName string, campaignCron string, campaignFilter str
     _, err := PgPool.Exec(context.Background(), query)
 
     if(err != nil) {
-        shared.Logger.Error("DB_OPERATION: failed to insert campaign record", "error", err)
+        shared.Logger.Error("DB_OPERATION: failed to insert campaign record", "error", err) // TODO: better error logging - cover specific errors
         return false
     }
 
